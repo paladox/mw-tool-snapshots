@@ -18,9 +18,9 @@ $repoInfos = array(
 		'display-title' => 'MediaWiki core',
 		'img' => '//upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png',
 		'site-url' => '//www.mediawiki.org/',
-		'repo-browse-url' => 'https://github.com/wikimedia/mediawiki-core',
-		'repo-branch-url' => 'https://github.com/wikimedia/mediawiki-core/tree/$1',
-		'repo-commit-url' => 'https://github.com/wikimedia/mediawiki-core/commit/$1',
+		'repo-browse-url' => 'https://github.com/wikimedia/mediawiki',
+		'repo-branch-url' => 'https://github.com/wikimedia/mediawiki/tree/$1',
+		'repo-commit-url' => 'https://github.com/wikimedia/mediawiki/commit/$1',
 	),
 );
 
@@ -181,10 +181,7 @@ if ( !$snapshotInfo ) {
 					'class' => 'btn btn-primary btn-lg',
 					'href' => $downloadUrl,
 				), '<span class="glyphicon glyphicon-download-alt"></span> '
-				. $I18N->msg( 'download-button', array(
-					'variables' => array( $branchName ),
-					'escape' => 'html',
-				) )
+				. $I18N->msg( 'download-button', array( 'escape' => 'html' ) )
 			);
 
 			if ( !$isAjax ) {
